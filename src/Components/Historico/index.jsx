@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../../Context";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { ItemLista } from "./ItemLista";
 
 export const Historico = () => {
@@ -8,23 +8,28 @@ export const Historico = () => {
     listaGastos
   } = useContext(Context);
 
+  if(listaGastos.length === 0){
+    return(
+        <Box
+        display={"flex"}
+        justifyContent={"center"}
+        margin={"10px 0px 0px 0"}
+        alignItems={"center"}
+        color={"black"}
+        fontSize={18}
+        height={"250px"}
+        >
+            Lista Vazia
+        </Box>
+    )
+  }
 
   return (
-    <Box height={"300px"}>
-      <Typography
-        color={"#020941dd"}
-        fontWeight={"b"}
-        fontSize={20}
-        height={"35px"}
-        borderBottom={"1px solid #ad0cf7"}
-      >
-        Hístorico
-      </Typography>
-
+    <Box height={"250px"}>
       <Box
         display={"flex"}
         flexDirection={"column"}
-        justifyContent={`${listaGastos == 0 ? "center" : "flex-start"}`}
+        justifyContent={"flex-start"}
         margin={"10px 0px 0px 0"}
         paddingRight={"5px"}
         alignItems={"center"}
@@ -34,7 +39,7 @@ export const Historico = () => {
         overflow={"auto"}
         boxSizing={"border-box"}
       >
-        {listaGastos == "" ? "Lista Vazia" : listaGastos.map((e, i) => {
+        {listaGastos.map((e, i) => {
       return (
         <ItemLista
           key={i}

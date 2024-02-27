@@ -15,7 +15,7 @@ export const ItemLista = (prop) => {
       backgroundColor={"#faf7f7df"}
       flexDirection={"row"}
       marginBottom={"5px"}
-      height={"50px"}
+      minHeight={"55px"}
       width={"100%"}
       onMouseLeave={() => setOpcao(false)}
       onMouseEnter={() => setOpcao(true)}
@@ -29,8 +29,7 @@ export const ItemLista = (prop) => {
         display={"flex"}
         alignItems={"center"}
         width={"50%"}
-        paddingLeft={"5px"}
-        height={"45px"}
+        paddingLeft={"15px"}
       >
         {data.transacao}
       </Typography>

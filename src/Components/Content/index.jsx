@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 import { Saldo } from "../Saldo";
 import { Historico } from "../Historico";
@@ -15,12 +15,29 @@ export const Content = () => {
       borderRadius={"10px"}
       backgroundColor={"#ffffff30"}
       boxShadow={10}
-
     >
-        <Header/>
-        <Saldo/>
-        <Historico/>
-        <NovaTransacao/>
+      <Header />
+      <Saldo />
+      <Typography
+        color={"#020941dd"}
+        fontWeight={"b"}
+        fontSize={20}
+        height={"35px"}
+        borderBottom={"1px solid #ad0cf7"}
+      >
+        Hístorico
+      </Typography>
+      <Historico />
+      <Typography
+        color={"#020941dd"}
+        fontWeight={"b"}
+        fontSize={20}
+        height={"35px"}
+        borderBottom={"1px solid #ad0cf7"}
+      >
+        Adicionar transação
+      </Typography>
+      <NovaTransacao />
     </Box>
   );
 };

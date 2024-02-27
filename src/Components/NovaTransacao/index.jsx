@@ -18,15 +18,7 @@ export const NovaTransacao = () => {
       height={"230px"}
       color={"black"}
     >
-      <Typography
-        color={"#020941dd"}
-        fontWeight={"b"}
-        fontSize={20}
-        height={"35px"}
-        borderBottom={"1px solid #ad0cf7"}
-      >
-        Adicionar transação
-      </Typography>
+
 
       <OpcoesDeTransacao func={{ setTipoTransacao: setTipoTransacao }} />
 
