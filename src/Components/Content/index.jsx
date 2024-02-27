@@ -1,9 +1,9 @@
 import { Box } from "@mui/material";
 import React from "react";
-import Header from "../Header";
 import { Saldo } from "../Saldo";
 import { Historico } from "../Historico";
 import { NovaTransacao } from "../NovaTransacao";
+import { Header } from "../Header";
 
 export const Content = () => {
   return (
