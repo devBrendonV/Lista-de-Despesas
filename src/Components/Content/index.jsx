@@ -1,5 +1,9 @@
 import { Box } from "@mui/material";
 import React from "react";
+import Header from "../Header";
+import { Saldo } from "../Saldo";
+import { Historico } from "../Historico";
+import { NovaTransacao } from "../NovaTransacao";
 
 export const Content = () => {
   return (
@@ -13,7 +17,10 @@ export const Content = () => {
       boxShadow={10}
 
     >
-      Conteudo
+        <Header/>
+        <Saldo/>
+        <Historico/>
+        <NovaTransacao/>
     </Box>
   );
 };
