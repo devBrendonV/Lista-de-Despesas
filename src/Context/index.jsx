@@ -23,6 +23,20 @@ export const ContextProvider = ({ children }) => {
       setSaida(saida - item.valor);
     }
   }
+  function adicionar(valor,texto) {
+    if (tipoTransacao == true) {
+      setTotal(total + valor);
+      setEntrada(entrada + valor);
+    }
+    if (tipoTransacao == false) {
+      setTotal(total - valor);
+      setSaida(saida + valor);
+    }
+    setListaGastos([
+      ...listaGastos,
+      { nome: texto, tipo: tipoTransacao, valor: valor },
+    ]);
+  }
 
 
   return (
@@ -39,6 +53,7 @@ export const ContextProvider = ({ children }) => {
         setSaida,
         setListaGastos,
         excluirTransacao,
+        adicionar
       }}
     >
       {children}
